@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Akshu Saini — Cybersecurity Enthusiast | Python, Linux & Web Design Portfolio" />
+  <title>Akshu Saini | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="scroll-progress-wrap" aria-hidden="true">
+    <svg class="scroll-progress-ring" viewBox="0 0 100 100">
+      <circle class="ring-bg" cx="50" cy="50" r="44" />
+      <circle class="ring-fill" cx="50" cy="50" r="44" id="scroll-ring" />
+    </svg>
+    <span class="scroll-pct" id="scroll-pct">0%</span>
+  </div>
+
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <canvas id="grid-canvas" aria-hidden="true"></canvas>
+  <div class="orb-bg" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#home" class="logo">
+        <span class="logo-bracket">&lt;</span>AS<span class="logo-bracket">/&gt;</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-bg"></div>
+      <div class="hero-orbit-wrap" aria-hidden="true">
+        <div class="orbit-ring orbit-ring-outer" id="orbit-outer">
+          <span class="orbit-item" style="--i:0">Python</span>
+          <span class="orbit-item" style="--i:1">Linux</span>
+          <span class="orbit-item" style="--i:2">HTB</span>
+          <span class="orbit-item" style="--i:3">Security</span>
+          <span class="orbit-item" style="--i:4">HTML</span>
+          <span class="orbit-item" style="--i:5">CTF</span>
+        </div>
+        <div class="orbit-ring orbit-ring-inner" id="orbit-inner">
+          <span class="orbit-item" style="--i:0">CSS</span>
+          <span class="orbit-item" style="--i:1">JS</span>
+          <span class="orbit-item" style="--i:2">THM</span>
+          <span class="orbit-item" style="--i:3">C++</span>
+        </div>
+        <div class="orbit-core">
+          <span class="orbit-core-text">AS</span>
+        </div>
+      </div>
+      <div class="container hero-content">
+        <p class="hero-greeting reveal">Hello, I'm</p>
+        <h1 class="hero-name reveal">
+          <span class="gradient-text">Akshu Saini</span>
+        </h1>
+        <p class="hero-role reveal">
+          <span id="typed-text"></span><span class="typed-cursor">|</span>
+        </p>
+        <p class="hero-desc reveal">
+          Passionate cybersecurity enthusiast skilled in Python, Linux, and responsive web design.
+          Building toward a career in security and software development.
+        </p>
+        <div class="hero-cta reveal">
+          <a href="#contact" class="btn btn-primary">Get In Touch</a>
+          <a href="#projects" class="btn btn-outline">View Projects</a>
+        </div>
+        <div class="hero-stats reveal">
+          <div class="stat">
+            <span class="stat-num" data-count="12">0</span>
+            <span class="stat-label">Class Grade</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-count="8">0</span>+
+            <span class="stat-label">Core Skills</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-count="3">0</span>
+            <span class="stat-label">Languages</span>
+          </div>
+        </div>
+        <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+          <span></span>
+        </a>
+      </div>
+      <svg class="curve-divider curve-bottom" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,40 Q360,90 720,40 T1440,40 L1440,80 L0,80 Z" fill="url(#curveGrad1)" />
+        <defs><linearGradient id="curveGrad1" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#0a0e17"/><stop offset="50%" stop-color="#111827"/><stop offset="100%" stop-color="#0a0e17"/></linearGradient></defs>
+      </svg>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">// about_me</span>
+          <h2>Who I Am</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-card reveal">
+            <div class="about-icon">🛡️</div>
+            <h3>Cybersecurity Focus</h3>
+            <p>
+              Self-motivated enthusiast exploring ethical hacking, networking basics, and security
+              fundamentals through Hack The Box and TryHackMe labs.
+            </p>
+          </div>
+          <div class="about-text reveal">
+            <p>
+              I'm a passionate and self-motivated cybersecurity enthusiast with knowledge of
+              <strong>Python</strong>, <strong>Linux systems</strong>, and <strong>web designing</strong>.
+              Skilled in problem-solving, basic networking, and creating responsive websites.
+            </p>
+            <p>
+              Currently pursuing <strong>Class 12 with Commerce and Computer Science</strong> at
+              Scholars Academy Roorkee. Eager to learn new technologies and build a career in
+              cybersecurity and software development.
+            </p>
+            <ul class="contact-quick">
+              <li>
+                <span class="label">Email</span>
+                <a href="mailto:akshu2saini5@gmail.com">akshu2saini5@gmail.com</a>
+              </li>
+              <li>
+                <span class="label">Phone</span>
+                <a href="tel:+918077478236">+91 8077478236</a>
+              </li>
+              <li>
+                <span class="label">Location</span>
+                <span>Roorkee, Uttarakhand, India</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section education" id="education">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">// education</span>
+          <h2>Education</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content card">
+              <span class="timeline-date">May 2026 — Present</span>
+              <h3>Class 12 — Commerce with Computer Science</h3>
+              <p class="timeline-place">Scholars Academy Roorkee · Roorkee, Uttarakhand</p>
+              <ul>
+                <li>Studying Commerce alongside Computer Science</li>
+                <li>Learning programming fundamentals, web technologies, and cybersecurity basics</li>
+                <li>Active interest in Linux systems and ethical hacking concepts</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section experience" id="experience">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">// experience</span>
+          <h2>Work & Learning</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-dot accent"></div>
+            <div class="timeline-content card">
+              <span class="timeline-date">May 2026 — Present</span>
+              <h3>Learning Cybersecurity</h3>
+              <p class="timeline-place">Hack The Box / TryHackMe · Roorkee</p>
+              <p>
+                Focused on developing technical skills through self-learning, online practice labs,
+                and personal projects. Hands-on practice with Linux, system management, and security
+                workflows in virtual environments.
+              </p>
+            </div>
+          </article>
+        </div>
+        <div class="org-banner reveal">
+          <h3>Cybersecurity & Tech Learning Communities</h3>
+          <p>Active participant in online cybersecurity and programming communities for learning and networking.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills scroll-orbit-section" id="skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">// skills</span>
+          <h2>Technical Skills</h2>
+          <p class="section-hint">Scroll — watch the orbit spin</p>
+        </div>
+        <div class="circular-skills reveal" id="circular-skills">
+          <div class="circular-skills-center">
+            <span>Core</span>
+            <strong>Stack</strong>
+          </div>
+          <div class="circular-skill" style="--angle:0" data-skill="90"><span>Python</span><svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="15.9" class="c-bg"/><circle cx="18" cy="18" r="15.9" class="c-fill" stroke-dasharray="90 100"/></svg></div>
+          <div class="circular-skill" style="--angle:60" data-skill="85"><span>Linux</span><svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="15.9" class="c-bg"/><circle cx="18" cy="18" r="15.9" class="c-fill" stroke-dasharray="85 100"/></svg></div>
+          <div class="circular-skill" style="--angle:120" data-skill="80"><span>Web</span><svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="15.9" class="c-bg"/><circle cx="18" cy="18" r="15.9" class="c-fill" stroke-dasharray="80 100"/></svg></div>
+          <div class="circular-skill" style="--angle:180" data-skill="75"><span>Security</span><svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="15.9" class="c-bg"/><circle cx="18" cy="18" r="15.9" class="c-fill" stroke-dasharray="75 100"/></svg></div>
+          <div class="circular-skill" style="--angle:240" data-skill="70"><span>Network</span><svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="15.9" class="c-bg"/><circle cx="18" cy="18" r="15.9" class="c-fill" stroke-dasharray="70 100"/></svg></div>
+          <div class="circular-skill" style="--angle:300" data-skill="85"><span>Logic</span><svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="15.9" class="c-bg"/><circle cx="18" cy="18" r="15.9" class="c-fill" stroke-dasharray="85 100"/></svg></div>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card reveal" data-skill="90">
+            <div class="skill-header">
+              <span>Python Programming</span>
+              <span class="skill-pct">90%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill"></div></div>
+          </div>
+          <div class="skill-card reveal" data-skill="85">
+            <div class="skill-header">
+              <span>Linux Operating System</span>
+              <span class="skill-pct">85%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill"></div></div>
+          </div>
+          <div class="skill-card reveal" data-skill="80">
+            <div class="skill-header">
+              <span>Web Design (HTML, CSS, JS)</span>
+              <span class="skill-pct">80%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill"></div></div>
+          </div>
+          <div class="skill-card reveal" data-skill="75">
+            <div class="skill-header">
+              <span>Cybersecurity Fundamentals</span>
+              <span class="skill-pct">75%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill"></div></div>
+          </div>
+          <div class="skill-card reveal" data-skill="70">
+            <div class="skill-header">
+              <span>Networking Basics</span>
+              <span class="skill-pct">70%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill"></div></div>
+          </div>
+          <div class="skill-card reveal" data-skill="85">
+            <div class="skill-header">
+              <span>Problem Solving</span>
+              <span class="skill-pct">85%</span>
+            </div>
+            <div class="skill-bar"><div class="skill-fill"></div></div>
+          </div>
+        </div>
+        <div class="soft-skills reveal">
+          <span class="chip">Communication</span>
+          <span class="chip">Teamwork</span>
+          <span class="chip">Collaboration</span>
+          <span class="chip">C / C++</span>
+          <span class="chip">Automation</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects circular-scroll-section" id="projects">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">// projects</span>
+          <h2>Personal Projects</h2>
+          <p class="section-hint">Drag or scroll the wheel</p>
+        </div>
+      </div>
+      <div class="circular-carousel-wrap" id="circular-carousel">
+        <div class="circular-carousel-stage">
+          <div class="circular-carousel-ring" id="carousel-ring">
+            <article class="project-card carousel-card" data-index="0">
+              <div class="project-glow"></div>
+              <span class="project-badge">Active</span>
+              <h3>Hack The Box Labs</h3>
+              <p class="project-date">May 2026 — Present</p>
+              <p>Linux commands, system management, and security practices in virtual environments.</p>
+              <div class="project-tags"><span>Linux</span><span>Security</span><span>VMs</span></div>
+            </article>
+            <article class="project-card carousel-card" data-index="1">
+              <div class="project-glow"></div>
+              <span class="project-badge">Learning</span>
+              <h3>TryHackMe Pathways</h3>
+              <p class="project-date">May 2026 — Present</p>
+              <p>Cybersecurity fundamentals, networking, and ethical hacking through guided rooms.</p>
+              <div class="project-tags"><span>CTF</span><span>Networking</span><span>Ethical Hacking</span></div>
+            </article>
+            <article class="project-card carousel-card" data-index="2">
+              <div class="project-glow"></div>
+              <span class="project-badge">Web</span>
+              <h3>Responsive Web Projects</h3>
+              <p class="project-date">Ongoing</p>
+              <p>Modern responsive sites with HTML, CSS, JavaScript — including this portfolio.</p>
+              <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+            </article>
+          </div>
+        </div>
+        <div class="carousel-controls">
+          <button type="button" class="carousel-btn" id="carousel-prev" aria-label="Previous project">‹</button>
+          <div class="carousel-dots" id="carousel-dots"></div>
+          <button type="button" class="carousel-btn" id="carousel-next" aria-label="Next project">›</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section certificates" id="certificates">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">// certificates</span>
+          <h2>Certifications</h2>
+        </div>
+        <div class="cert-grid">
+          <div class="cert-card reveal"><span class="cert-icon">🐍</span><p>Python Programming Basics</p></div>
+          <div class="cert-card reveal"><span class="cert-icon">🔐</span><p>Introduction to Cybersecurity</p></div>
+          <div class="cert-card reveal"><span class="cert-icon">🐧</span><p>Linux Fundamentals</p></div>
+          <div class="cert-card reveal"><span class="cert-icon">🌐</span><p>Web Development Basics</p></div>
+          <div class="cert-card reveal"><span class="cert-icon">⚙️</span><p>C / C++ Programming</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section languages" id="languages">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">// languages</span>
+          <h2>Languages</h2>
+        </div>
+        <div class="lang-grid">
+          <div class="lang-card reveal">
+            <h3>English</h3>
+            <p>Full Professional Proficiency</p>
+            <div class="lang-bar"><div class="lang-fill" style="--w: 95%"></div></div>
+          </div>
+          <div class="lang-card reveal">
+            <h3>Hindi</h3>
+            <p>Full Professional Proficiency</p>
+            <div class="lang-bar"><div class="lang-fill" style="--w: 95%"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section interests scroll-orbit-section" id="interests">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">// interests</span>
+          <h2>Interests</h2>
+        </div>
+        <div class="text-orbit-wrap reveal" id="text-orbit">
+          <svg class="text-orbit-svg" viewBox="0 0 400 400">
+            <defs>
+              <path id="orbitPath" d="M 200,200 m -140,0 a 140,140 0 1,1 280,0 a 140,140 0 1,1 -280,0" />
+            </defs>
+            <text class="orbit-text">
+              <textPath href="#orbitPath" startOffset="0%">
+                ★ Cybersecurity ★ Ethical Hacking ★ Linux ★ Web Dev ★ Automation ★ Gaming ★ Tech ★
+              </textPath>
+            </text>
+          </svg>
+          <div class="text-orbit-center">PASSION</div>
+        </div>
+        <div class="interests-marquee">
+          <div class="marquee-track">
+            <span>Cybersecurity</span><span>Ethical Hacking</span><span>Linux Systems</span>
+            <span>Web Development</span><span>Coding & Automation</span><span>Tech Trends</span>
+            <span>Gaming</span><span>Tech Communities</span>
+            <span>Cybersecurity</span><span>Ethical Hacking</span><span>Linux Systems</span>
+            <span>Web Development</span><span>Coding & Automation</span><span>Tech Trends</span>
+            <span>Gaming</span><span>Tech Communities</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">// contact</span>
+          <h2>Let's Connect</h2>
+        </div>
+        <div class="contact-wrapper reveal">
+          <p>Open to internships, collaborations, and learning opportunities in cybersecurity and development.</p>
+          <div class="contact-links">
+            <a href="mailto:akshu2saini5@gmail.com" class="contact-btn">
+              <span>✉️</span> akshu2saini5@gmail.com
+            </a>
+            <a href="tel:+918077478236" class="contact-btn">
+              <span>📞</span> +91 8077478236
+            </a>
+            <a href="https://maps.google.com/?q=Roorkee,Uttarakhand,India" target="_blank" rel="noopener" class="contact-btn">
+              <span>📍</span> Roorkee, Uttarakhand, India
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Akshu Saini. Built with passion for security & code.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
